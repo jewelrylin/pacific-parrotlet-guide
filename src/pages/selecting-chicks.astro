@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="幼鳥挑選" description="太平洋鸚鵡幼鳥挑選完整指南 — 最佳年齡、健康檢查表、性別判斷、向繁殖者提問清單" currentPath="/selecting-chicks"
+  pageImage="/images/parrot-chicks.jpg"
+  pageImageAlt="太平洋鸚鵡幼雛（Forpus coelestis chicks）">
+  <h1>🥚 幼鳥挑選</h1>
+  <p class="lead">選對幼鳥是成功飼養的第一步。以下從年齡、外觀、行為到性別判斷，幫您挑選健康的太平洋鸚鵡。</p>
+
+  <h2>最佳年齡</h2>
+  <div class="card">
+    <ul>
+      <li>雛鳥約 <strong>4–5 週齡</strong>離巢，<strong>8–10 週齡</strong>完全斷奶</li>
+      <li>理想的帶回家年齡：<strong>完全斷奶後</strong>（8–10 週），且已會自行進食固體食物</li>
+      <li>若想手養：建議 <strong>2–3 週齡</strong>開始，此時眼睛已睜開、羽管開始生長</li>
+    </ul>
+  </div>
+
+  <h2>健康幼鳥外觀檢查表</h2>
+  <div class="alert alert-green"><strong>💡 逐項檢查，不要只看整體印象</strong></div>
+  <table>
+    <tr>
+      <th>檢查項目</th>
+      <th>✅ 健康</th>
+      <th>❌ 警訊</th>
+    </tr>
+    <tr><td>眼睛</td><td>明亮清澈、無分泌物</td><td>眼周潮濕、腫脹、半閉</td></tr>
+    <tr><td>鼻孔</td><td>乾淨乾燥</td><td>有分泌物、堵塞、氣泡</td></tr>
+    <tr><td>喙</td><td>粉白色、無變形、無裂痕</td><td>過長、歪斜、有裂縫或增生</td></tr>
+    <tr><td>羽毛</td><td>整潔光滑（換羽期有羽管正常）</td><td>禿斑、羽毛雜亂不整、上有糞便</td></tr>
+    <tr><td>皮膚</td><td>粉紅色健康</td><td>蒼白、發紫、有寄生蟲</td></tr>
+    <tr><td>腳趾/腿</td><td>粉灰色、趾甲直、無腫脹</td><td>彎曲、腫脹、缺趾、腳皮脫屑</td></tr>
+    <tr><td>泄殖腔</td><td>乾淨乾燥</td><td>沾黏糞便、紅腫、潮濕</td></tr>
+    <tr><td>體重</td><td>穩定增加、接近品種標準</td><td>體重停滯或下降</td></tr>
+  </table>
+
+  <h2>行為健康指標</h2>
+  <ul>
+    <li><strong>索食反應強烈</strong>：餓時會主動轉頭尋找食物</li>
+    <li><strong>活動力佳</strong>：好奇觀察環境、羽管展開</li>
+    <li><strong>叫聲正常</strong>：會發出輕柔的叫聲索食或呼喚</li>
+    <li><strong>排泄正常</strong>：糞便深綠/黑色部分 + 白色尿酸鹽（成團不散）</li>
+  </ul>
+
+  <h2>幼鳥性別判斷</h2>
+  <table>
+    <tr><th>性別</th><th>特徵</th></tr>
+    <tr><td><strong>公鳥幼體</strong></td><td>眼後藍色較少、翅膀藍色較淺、腰部為藍綠色非純藍。喙比成鳥更粉紅</td></tr>
+    <tr><td><strong>母鳥幼體</strong></td><td>全身翠綠，無藍色羽毛，體型通常略小</td></tr>
+    <tr><td><strong>快速判斷</strong></td><td>有藍色羽毛 = 公鳥（但幼公鳥藍色較淡，需仔細觀察）</td></tr>
+  </table>
+
+  <h2>向繁殖者提問的清單</h2>
+  <ol>
+    <li>繁殖多久了？有無專業認證？</li>
+    <li>雛鳥是否每天有人手接觸互動？</li>
+    <li>斷奶方式？何時開始斷奶？</li>
+    <li>父母鳥是否健康檢查過？有無遺傳病史？</li>
+    <li>能否看到父母鳥和飼養環境？</li>
+    <li>雛鳥有無腳環？（閉環上有孵化年份）</li>
+    <li>有無健康保證或退換政策？</li>
+  </ol>
+
+  <div class="alert alert-yellow">
+    <strong>📌 小提醒：</strong>若繁殖者拒絕讓您看到飼養環境或父母鳥，請提高警覺。
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+</style>

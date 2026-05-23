@@ -1,0 +1,99 @@
+---
+export interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const sections = [
+  { href: '/',                label: '🦜 物種概述',  subtitle: '' },
+  { href: '/selecting-chicks', label: '🥚 幼鳥挑選',  subtitle: '健康檢查表、性別判斷' },
+  { href: '/hand-feeding',     label: '🍼 手養方式',  subtitle: '成長時程、餵食步驟、保溫' },
+  { href: '/taming',           label: '🤝 親人訓練',  subtitle: '上手訓練、正向強化' },
+  { href: '/health-check',     label: '🏥 健康檢查',  subtitle: '疾病徵兆、急救照護' },
+  { href: '/daily-care',       label: '🏠 日常飼養',  subtitle: '飲食、籠具、環境安全' },
+  { href: '/behavior',         label: '🧠 行為特質',  subtitle: '飼養提醒、Q&A' },
+];
+---
+
+<aside class="sidebar">
+  <div class="sidebar-header">目錄</div>
+  <nav>
+    <ul class="sidebar-list">
+      {sections.map(s => (
+        <li class="sidebar-item">
+          <a
+            href={s.href}
+            class:list={{ 'sidebar-link': true, active: currentPath === s.href }}
+          >
+            <span class="sidebar-label">{s.label}</span>
+            {s.subtitle && <span class="sidebar-sub">{s.subtitle}</span>}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
+
+<style>
+  .sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 84px;
+    align-self: flex-start;
+    max-height: calc(100vh - 104px);
+    overflow-y: auto;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    padding: 0.5rem;
+  }
+  .sidebar-header {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--coral);
+    padding: 0.6rem 0.85rem 0.4rem;
+  }
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+  }
+  .sidebar-item { margin-bottom: 0.2rem; }
+  .sidebar-link {
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem 0.85rem;
+    border-radius: 10px;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.18s;
+    text-decoration: none;
+  }
+  .sidebar-link:hover {
+    background: var(--amber-50);
+    color: var(--coral-dark);
+    text-decoration: none;
+  }
+  .sidebar-link.active {
+    background: linear-gradient(135deg, var(--coral), var(--amber));
+    color: white;
+    box-shadow: 0 3px 10px rgba(200,80,30,0.25);
+  }
+  .sidebar-link.active .sidebar-sub {
+    opacity: 0.85;
+  }
+  .sidebar-sub {
+    font-size: 0.72rem;
+    font-weight: 400;
+    opacity: 0.6;
+    margin-top: 0.15rem;
+  }
+  @media (max-width: 768px) {
+    .sidebar { display: none; }
+  }
+</style>

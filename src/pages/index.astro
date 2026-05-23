@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="首頁"
+  description="太平洋鸚鵡（Pacific Parrotlet）完整飼養指南 — 幼鳥挑選、手養方式、親人訓練、健康檢查、日常照護"
+  currentPath="/"
+  pageImage="/images/parrot-wild.jpg"
+  pageImageAlt="野生太平洋鸚鵡（Pacific Parrotlet）"
+>
+  <section class="hero">
+    <h1>🦜 太平洋鸚鵡飼養指南</h1>
+    <p class="hero-sub">Pacific Parrotlet Care Guide — <em>Forpus coelestis</em></p>
+    <p class="hero-desc">全世界最小的鸚鵡之一，卻有著大鳥的個性。本指南涵蓋從幼鳥挑選到日常照護的所有知識，幫助您與口袋鸚鵡共度 15–25 年的美好時光。</p>
+  </section>
+
+  <div class="quick-info card">
+    <h2>🔍 物種速覽</h2>
+    <table>
+      <tr><th>學名</th><td>Forpus coelestis</td></tr>
+      <tr><th>別名</th><td>太平洋鸚哥、Celestial Parrotlet、口袋鸚鵡</td></tr>
+      <tr><th>原生地</th><td>厄瓜多西部、祕魯西北部（太平洋沿岸）</td></tr>
+      <tr><th>體型</th><td>10–12 公分（全世界最小鸚鵡之一）</td></tr>
+      <tr><th>體重</th><td>31–34 公克</td></tr>
+      <tr><th>壽命</th><td>人工飼養 15–25 年</td></tr>
+      <tr><th>性格</th><td>膽大、好奇、有主見、領地性強</td></tr>
+    </table>
+  </div>
+
+  <h2>📖 飼養指南總覽</h2>
+  <div class="card-grid">
+    <a href="/selecting-chicks" class="card-link">
+      <div class="card">
+        <div class="card-icon">🥚</div>
+        <h3>幼鳥挑選</h3>
+        <p>最佳年齡、健康檢查表、性別判斷、向繁殖者提問清單。</p>
+      </div>
+    </a>
+    <a href="/hand-feeding" class="card-link">
+      <div class="card">
+        <div class="card-icon">🍼</div>
+        <h3>手養方式</h3>
+        <p>成長時程表、配方調配、餵食步驟、保溫需求、斷奶流程。</p>
+      </div>
+    </a>
+    <a href="/taming" class="card-link">
+      <div class="card">
+        <div class="card-icon">🤝</div>
+        <h3>親人訓練</h3>
+        <p>適應期、建立信任、上手訓練、棍棒訓練、正向強化。</p>
+      </div>
+    </a>
+    <a href="/health-check" class="card-link">
+      <div class="card">
+        <div class="card-icon">🏥</div>
+        <h3>健康檢查</h3>
+        <p>每日檢查、疾病徵兆對照表、血羽處理、卡蛋急救、醫院籠設置。</p>
+      </div>
+    </a>
+    <a href="/daily-care" class="card-link">
+      <div class="card">
+        <div class="card-icon">🏠</div>
+        <h3>日常飼養</h3>
+        <p>飲食比例、籠具環境、家中危險源、睡眠、洗澡。</p>
+      </div>
+    </a>
+    <a href="/behavior" class="card-link">
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>行為特質</h3>
+        <p>單隻 vs 一對飼養建議、與其他寵物相處、飼養提醒。</p>
+      </div>
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 2rem 1rem 1.5rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.3rem;
+    background: linear-gradient(135deg, var(--coral-dark), var(--amber));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-sub {
+    color: var(--amber);
+    font-size: 1.05rem;
+    margin-bottom: 0.9rem;
+  }
+  .hero-desc {
+    max-width: 620px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .quick-info {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 0.5rem;
+  }
+  .card-link {
+    text-decoration: none !important;
+    color: inherit;
+    display: block;
+    transition: transform 0.2s;
+  }
+  .card-link:hover {
+    transform: translateY(-5px);
+    text-decoration: none;
+  }
+  .card-link .card {
+    height: 100%;
+    border-top: 4px solid var(--coral-light);
+  }
+  .card-link:hover .card {
+    border-top-color: var(--coral);
+    box-shadow: 0 8px 28px rgba(200,80,30,0.18);
+  }
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .card-link h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .card-link p {
+    color: var(--text-light);
+    font-size: 0.88rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 1.7rem; }
+    .card-grid { grid-template-columns: 1fr; }
+  }
+</style>

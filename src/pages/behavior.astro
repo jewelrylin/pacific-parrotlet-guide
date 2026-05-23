@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="行為特質" description="太平洋鸚鵡行為特質解析 — 單隻 vs 一對飼養建議、與其他寵物相處、飼養提醒" currentPath="/behavior"
+  pageImage="/images/parrot-behavior.jpg"
+  pageImageAlt="兩隻太平洋鸚鵡在厄瓜多（two Pacific Parrotlets in Ecuador）">
+  <h1>🧠 行為特質</h1>
+  <p class="lead">太平洋鸚鵡雖然體型小巧，但性格一點也不小。了解牠們的行為特質，才能建立和諧的共居關係。</p>
+
+  <h2>性格速覽</h2>
+  <table>
+    <tr><th>特質</th><th>說明</th></tr>
+    <tr><td>膽大</td><td>不怕人，但需要正確引導</td></tr>
+    <tr><td>有主見</td><td>容易發展出啄咬習慣 — 需從小訓練</td></tr>
+    <tr><td>領地性強</td><td>對其他鳥類有攻擊性 — 通常只能養一對或一隻</td></tr>
+    <tr><td>咬合力</td><td>比虎皮鸚鵡強很多 — 不要低估牠的小喙</td></tr>
+    <tr><td>與其他寵物</td><td>從小接觸可和平相處，否則可能衝突</td></tr>
+    <tr><td>叫聲</td><td>不吵雜，約等於玄鳳鸚鵡音量</td></tr>
+    <tr><td>破壞力</td><td>比大型鸚鵡小得多 — 適合公寓飼養</td></tr>
+  </table>
+
+  <h2>關於養單隻 vs 一對</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>🐦 養單隻</h3>
+      <ul>
+        <li>若主人每天有 <strong>1–2 小時</strong>互動時間 → 可以非常親人</li>
+        <li>鳥會把主人當作伴侶，互動需求高</li>
+        <li>適合能投入大量時間的主人</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🐦🐦 養一對</h3>
+      <ul>
+        <li>若主人白天長時間不在家 → <strong>建議養一對</strong></li>
+        <li>但一對之間的連結 > 和主人的連結</li>
+        <li>兩隻成鳥若非從小一起養 → 可能打架到無法同籠</li>
+        <li>需提供更大的居住空間</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>常見行為問題與對策</h2>
+  <table>
+    <tr><th>行為</th><th>原因</th><th>解決方案</th></tr>
+    <tr>
+      <td>咬人</td>
+      <td>恐懼、發情、領域性、測試界線</td>
+      <td>不要大聲反應，冷靜放下鳥走開。找出咬人原因而非懲罰</td>
+    </tr>
+    <tr>
+      <td>尖叫</td>
+      <td>尋求注意、無聊、寂寞</td>
+      <td>確保有足夠玩具和互動，安靜時給予獎勵</td>
+    </tr>
+    <tr>
+      <td>拔毛</td>
+      <td>壓力、無聊、營養不良、皮膚病</td>
+      <td>增加環境豐富度，檢查飲食，必要時就醫</td>
+    </tr>
+    <tr>
+      <td>發情行為</td>
+      <td>日照過長、過多脂肪食物、摸背</td>
+      <td>控制睡眠 12–13 小時，降低脂肪攝取，避免摸背部和翅膀下</td>
+    </tr>
+    <tr>
+      <td>對籠子具攻擊性</td>
+      <td>領域性過強</td>
+      <td>讓鳥自行出籠而非伸手進籠抓，重新布置籠內擺設</td>
+    </tr>
+  </table>
+
+  <div class="alert alert-green">
+    <strong>💡 最重要的飼養提醒：</strong>太平洋鸚鵡壽命長達 15–25 年，是長期的承諾。養鳥前請確認未來十年以上的生活規劃都能包含牠。
+  </div>
+
+  <h2>與其他寵物相處</h2>
+  <ul>
+    <li><strong>貓狗</strong>：從小慢慢介紹，永遠不要讓鳥和貓狗單獨相處</li>
+    <li><strong>其他鳥類</strong>：太平洋鸚鵡領地性強，不同種鳥需分開飼養</li>
+    <li>鳥的指甲和喙很尖銳，小型哺乳類需小心</li>
+    <li>任何互動都應在主人監督下進行</li>
+  </ul>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+</style>

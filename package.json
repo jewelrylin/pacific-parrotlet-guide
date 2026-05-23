@@ -1,0 +1,14 @@
+{
+  "name": "pacific-parrotlet-guide",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "太平洋鸚鵡完整飼養指南",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.0.0"
+  }
+}

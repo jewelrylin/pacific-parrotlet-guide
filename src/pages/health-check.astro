@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="健康檢查" description="太平洋鸚鵡健康檢查完整指南 — 每日檢查、疾病徵兆對照表、血羽處理、卡蛋急救、醫院籠設置" currentPath="/health-check"
+  pageImage="/images/parrot-healthy.jpg"
+  pageImageAlt="健康的雄性太平洋鸚鵡（Forpus coelestis male, Peru）">
+  <h1>🏥 健康檢查</h1>
+  <p class="lead">鸚鵡是天生的隱藏病情高手。每日觀察是及早發現問題的關鍵。</p>
+
+  <h2>每日快速檢查（30 秒）</h2>
+  <p>每天換飼料/水的時候順便觀察：</p>
+  <table>
+    <tr><th>檢查</th><th>看什麼</th></tr>
+    <tr><td>精神狀態</td><td>活潑還是縮頭閉眼？</td></tr>
+    <tr><td>羽毛狀態</td><td>整潔還是蓬鬆炸毛？</td></tr>
+    <tr><td>排泄物</td><td>成形、顏色正常？</td></tr>
+    <tr><td>食慾</td><td>飼料有減少嗎？</td></tr>
+    <tr><td>叫聲</td><td>正常還是安靜異常？</td></tr>
+  </table>
+
+  <h2>疾病徵兆對照表</h2>
+  <table>
+    <tr><th>徵兆</th><th>可能原因</th><th>緊急程度</th></tr>
+    <tr>
+      <td>炸毛 + 閉眼 + 虛弱</td>
+      <td>多種疾病通用徵兆</td>
+      <td><span class="status-dot status-red"></span>立即就醫</td>
+    </tr>
+    <tr>
+      <td>尾巴隨著呼吸上下擺動</td>
+      <td>呼吸困難（呼吸道感染）</td>
+      <td><span class="status-dot status-red"></span>立即就醫</td>
+    </tr>
+    <tr>
+      <td>鼻孔有分泌物或氣泡</td>
+      <td>呼吸道感染</td>
+      <td><span class="status-dot status-red"></span>立即就醫</td>
+    </tr>
+    <tr>
+      <td>喙部發出喀喀聲（呼吸時）</td>
+      <td>氣囊蟎（小型鳥常見）</td>
+      <td><span class="status-dot status-yellow"></span>盡快就醫</td>
+    </tr>
+    <tr>
+      <td>嘔吐（非吐料餵食行為）</td>
+      <td>感染、中毒、嗉囊炎</td>
+      <td><span class="status-dot status-yellow"></span>盡快就醫</td>
+    </tr>
+    <tr>
+      <td>體重下降</td>
+      <td>寄生蟲、慢性病</td>
+      <td><span class="status-dot status-yellow"></span>盡快就醫</td>
+    </tr>
+    <tr>
+      <td>食慾不振</td>
+      <td>多種可能</td>
+      <td><span class="status-dot status-yellow"></span>觀察 1 天→就醫</td>
+    </tr>
+    <tr>
+      <td>羽毛雜亂不整理</td>
+      <td>不適或生病</td>
+      <td><span class="status-dot status-yellow"></span>觀察</td>
+    </tr>
+    <tr>
+      <td>糞便異常（稀、有血、異色）</td>
+      <td>細菌/寄生蟲感染</td>
+      <td><span class="status-dot status-yellow"></span>盡快就醫</td>
+    </tr>
+    <tr>
+      <td>整天睡覺</td>
+      <td>生病、壓力</td>
+      <td><span class="status-dot status-yellow"></span>觀察</td>
+    </tr>
+    <tr>
+      <td>突然變兇</td>
+      <td>受傷或不適</td>
+      <td><span class="status-dot status-yellow"></span>檢查有無外傷</td>
+    </tr>
+    <tr>
+      <td>突然非常溫馴不反抗</td>
+      <td>重病（鳥類會隱藏症狀直到末期）</td>
+      <td><span class="status-dot status-red"></span>立即就醫</td>
+    </tr>
+    <tr>
+      <td>蹲在籠底</td>
+      <td>極度虛弱</td>
+      <td><span class="status-dot status-red"></span>緊急狀況</td>
+    </tr>
+    <tr>
+      <td>喘氣、張翅</td>
+      <td>過熱、呼吸道問題</td>
+      <td><span class="status-dot status-yellow"></span>移至通風陰涼處觀察</td>
+    </tr>
+    <tr>
+      <td>腳腫、跛行</td>
+      <td>骨折、脫臼、寄生蟲</td>
+      <td><span class="status-dot status-yellow"></span>盡快就醫</td>
+    </tr>
+  </table>
+
+  <h2>受傷處理</h2>
+
+  <h3>血羽（Blood Feather / 羽管出血）</h3>
+  <div class="card">
+    <p>生長中的羽毛內部有血管（白色羽管）。若斷裂出血：<strong>必須從根部拔除</strong>。</p>
+    <h4>步驟</h4>
+    <ol>
+      <li>用毛巾輕柔包裹鳥（不要包太緊 — 鳥用胸肌呼吸，太緊會窒息）</li>
+      <li>找到出血羽管根部</li>
+      <li>用尖嘴鉗夾住根部，順著羽毛方向<strong>用力拔出</strong></li>
+      <li>用稀釋雙氧水消毒</li>
+      <li>按壓止血</li>
+    </ol>
+    <div class="alert alert-red">若仍不止血 → 立即送醫</div>
+  </div>
+
+  <h3>卡蛋（Egg Binding）— 緊急狀況</h3>
+  <div class="card">
+    <p>母鳥蹲在籠底、炸毛、痛苦、腹部腫脹 — 可能致命，立即處理。</p>
+    <h4>步驟</h4>
+    <ol>
+      <li>準備<strong>醫院籠</strong>（見下方）</li>
+      <li>加溫至 35–37°C（98–99°F）</li>
+      <li>滴 1–2 滴橄欖油入喙 + 數滴在泄殖腔</li>
+      <li>提供淺水盆增加濕度</li>
+      <li>⚠️ 若 1–2 小時內未產出 → <strong>立即送醫</strong></li>
+    </ol>
+  </div>
+
+  <h2>醫院籠（Hospital Cage）設置</h2>
+  <table>
+    <tr><th>項目</th><th>設置方式</th></tr>
+    <tr><td>容器</td><td>10 加侖魚缸或小運輸籠</td></tr>
+    <tr><td>底材</td><td>廚房紙巾（易觀察排泄物）</td></tr>
+    <tr><td>加熱</td><td>加熱墊放 <strong>籠子一半底下</strong>（低溫檔），讓鳥可以選擇涼處</td></tr>
+    <tr><td>遮蓋</td><td>蓋 3/4 的毛巾 → 暗、安靜、減少壓力</td></tr>
+    <tr><td>溫度</td><td>不超過 35°C（95–98°F）</td></tr>
+    <tr><td>飲水</td><td>極淺水盆（病鳥可能在 1 寸水中溺斃）</td></tr>
+    <tr><td>食物</td><td>最愛吃的、易進食的食物（滋養丸、小米穗）</td></tr>
+    <tr><td>位置</td><td>放在安靜的房間</td></tr>
+  </table>
+
+  <h2>換羽期護理（Molting）</h2>
+  <ul>
+    <li>每年 1–2 次季節性換羽</li>
+    <li>需要額外蛋白質和維生素</li>
+    <li>鳥可能脾氣暴躁（羽管癢）</li>
+    <li>可幫忙搓開頭頂羽管（輕捏羽管尖端）</li>
+    <li>提供沐浴機會（噴霧或淺水盆）</li>
+    <li>鳥需要比平常更多休息</li>
+  </ul>
+
+  <h2>新鳥檢疫（Quarantine）</h2>
+  <div class="alert alert-yellow">
+    <strong>家中已有其他鳥類時：</strong>
+  </div>
+  <ul>
+    <li><strong>30–40 天</strong>完全隔離</li>
+    <li>最好不同通風系統</li>
+    <li>先照顧舊鳥 → 再照顧新鳥</li>
+    <li>接觸新鳥後徹底洗手換衣</li>
+    <li>經獸醫檢查確認無問題後才能合籠</li>
+  </ul>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+</style>

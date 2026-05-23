@@ -1,0 +1,117 @@
+---
+const navItems = [
+  { href: '/', label: '首頁' },
+  { href: '/selecting-chicks', label: '幼鳥挑選' },
+  { href: '/hand-feeding', label: '手養方式' },
+  { href: '/taming', label: '親人訓練' },
+  { href: '/health-check', label: '健康檢查' },
+  { href: '/daily-care', label: '日常飼養' },
+  { href: '/behavior', label: '行為特質' },
+];
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <span class="logo-icon">🦜</span>
+      <span class="logo-text">太平洋鸚鵡飼養指南</span>
+    </a>
+    <button class="menu-toggle" aria-label="選單" id="menuToggle">☰</button>
+    <nav class="nav" id="mainNav">
+      {navItems.map(item => (
+        <a href={item.href} class="nav-link">{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: linear-gradient(135deg, #C94B1F 0%, #FF6B35 45%, #F4A261 100%);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 14px rgba(200,80,30,0.28);
+  }
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    height: 64px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none !important;
+    letter-spacing: 0.01em;
+  }
+  .logo-icon {
+    font-size: 1.7rem;
+    filter: drop-shadow(0 1px 3px rgba(0,0,0,0.25));
+  }
+  .logo-text {
+    text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  }
+  .nav {
+    display: flex;
+    gap: 0.2rem;
+  }
+  .nav-link {
+    color: rgba(255,255,255,0.9);
+    padding: 0.45rem 0.8rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav-link:hover {
+    color: white;
+    background: rgba(255,255,255,0.18);
+    text-decoration: none;
+  }
+  .menu-toggle {
+    display: none;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    transition: background 0.2s;
+  }
+  .menu-toggle:hover { background: rgba(255,255,255,0.25); }
+
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+    .nav {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: linear-gradient(160deg, #C94B1F, #FF6B35);
+      flex-direction: column;
+      padding: 0.75rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+    .nav.open { display: flex; }
+    .nav-link { padding: 0.8rem 1rem; font-size: 0.95rem; }
+  }
+</style>
+
+<script>
+  document.getElementById('menuToggle')?.addEventListener('click', () => {
+    document.getElementById('mainNav')?.classList.toggle('open');
+  });
+</script>

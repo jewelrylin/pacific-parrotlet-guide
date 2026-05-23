@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="日常飼養" description="太平洋鸚鵡日常飼養完整指南 — 飲食比例、籠具環境、家中危險源、睡眠與洗澡" currentPath="/daily-care"
+  pageImage="/images/parrot-daily.jpg"
+  pageImageAlt="太平洋鸚鵡日常生活（Pacific Parrotlet daily life）">
+  <h1>🏠 日常飼養</h1>
+  <p class="lead">良好的日常照護是鳥兒健康快樂的基礎。從飲食、環境到安全，缺一不可。</p>
+
+  <h2>飲食</h2>
+
+  <h3>主食組合（以滋養丸為基底）</h3>
+  <table>
+    <tr><th>食物類型</th><th>比例</th><th>範例</th></tr>
+    <tr><td>滋養丸（Pellet）</td><td>60–70%</td><td>Harrison's, Roudybush, TOPs</td></tr>
+    <tr><td>小型鸚鵡綜合種子</td><td>20–30%</td><td>小米、燕麥、少量紅花籽、少量葵花籽</td></tr>
+    <tr><td>新鮮蔬果</td><td>10–15%</td><td>蘋果（去籽）、菠菜、萵苣、蒲公英葉、紅蘿蔔、漿果</td></tr>
+    <tr><td>發芽種子</td><td>偶爾補充</td><td>發芽小米、發芽葵花籽（營養加倍）</td></tr>
+  </table>
+
+  <div class="alert alert-red">
+    <strong>❌ 不可餵食：</strong> 酪梨（劇毒）、巧克力、咖啡因、酒精、洋蔥、大蒜、高鹽/高油加工食品
+  </div>
+  <div class="alert alert-yellow">
+    <strong>⚠️ 注意：</strong>水果種子（蘋果籽、櫻桃籽）含微量氰化物，請先去除。葵花籽脂肪高 → 少量點心用。<br>
+    <strong>脂肪肝</strong>是新世界鸚鵡常見病 — 避免高脂飲食。
+  </div>
+
+  <h2>籠具與環境</h2>
+  <table>
+    <tr><th>項目</th><th>建議</th></tr>
+    <tr><td>最小籠子尺寸</td><td>60cm × 45cm × 45cm 以上</td></tr>
+    <tr><td>最佳（有空間）</td><td>飛籠或鳥舍長度 180–210cm</td></tr>
+    <tr><td>棲木</td><td>天然樹枝（蘋果木、松木、杉木）— 不同粗細</td></tr>
+    <tr><td>玩具</td><td>鞦韆、繩梯、啃咬玩具、覓食益智玩具、松果（經高溫滅菌）</td></tr>
+    <tr><td>沐浴</td><td>每日提供淺水盆或噴霧</td></tr>
+    <tr><td>籠間距</td><td>≤ 1.2cm（避免鳥頭卡住或逃逸）</td></tr>
+  </table>
+
+  <div class="alert alert-blue">
+    <strong>💪 每天出籠活動時間：</strong>至少 1–2 小時（否則容易肥胖）。
+  </div>
+
+  <h2>家中的危險源</h2>
+  <table>
+    <tr><th>危險</th><th>說明</th></tr>
+    <tr><td>不沾鍋/鐵氟龍</td><td>加熱會釋放劇毒氣體 — 鳥吸入數分鐘內死亡</td></tr>
+    <tr><td>香氛蠟燭、擴香</td><td>人工香精對鳥呼吸道有害</td></tr>
+    <tr><td>精油</td><td>某些精油對鳥劇毒（茶樹、尤加利）</td></tr>
+    <tr><td>吊扇</td><td>鳥撞到吊扇 = 致命傷</td></tr>
+    <tr><td>鏡子/玻璃窗</td><td>鳥會撞上去（頸椎骨折）</td></tr>
+    <tr><td>開放水容器</td><td>鳥可能在馬桶、水杯、魚缸中淹死</td></tr>
+    <tr><td>電線</td><td>鸚鵡愛咬電線 — 觸電風險</td></tr>
+    <tr><td>新地毯/新裝潢</td><td>釋放甲醛等有毒氣體</td></tr>
+    <tr><td>鉛</td><td>彩繪玻璃、釣魚鉛錘、老舊油漆</td></tr>
+  </table>
+
+  <h2>睡眠需求</h2>
+  <ul>
+    <li>每天 <strong>12–13 小時</strong>不受干擾的睡眠</li>
+    <li>睡眠不足會使鳥進入發情模式（行為問題）</li>
+    <li>建議設置<strong>睡覺籠</strong>（放在安靜暗房）或每天定時蓋籠布</li>
+  </ul>
+
+  <h2>洗澡</h2>
+  <div class="card">
+    <p>太平洋鸚鵡喜歡洗澡！</p>
+    <ul>
+      <li>每天提供淺水盆（放置 15–30 分鐘後取走）</li>
+      <li>噴霧瓶噴霧（模擬雨淋）</li>
+      <li>天氣溫暖時進行</li>
+      <li>不要吹風（冷風可能著涼）</li>
+    </ul>
+  </div>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+</style>
