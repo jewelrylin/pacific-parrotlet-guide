@@ -6,15 +6,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="進階技能訓練"
   description="太平洋鸚鵡進階訓練 — 響片訓練、目標訓練、飛行召回、特技教學、外出繩訓練、覓食益智遊戲"
   currentPath="/training-skills"
-  pageImage="/images/parrot-train.jpg"
-  pageImageAlt="進行訓練的太平洋鸚鵡（training Pacific Parrotlet）"
+  pageImage="/images/training/parrotlet-profile.jpg"
+  pageImageAlt="漂亮公太平洋鸚鵡特寫"
 >
   <h1>🎯 進階技能訓練</h1>
   <p class="lead">當基本親人訓練（上手、棍棒）已經穩定後，可以開始更有趣的進階訓練。響片訓練、目標訓練、特技教學不只能增進鳥兒的智力刺激，更能大幅增進你與鳥之間的信賴關係。</p>
 
   <!-- ── Clicker Training ── -->
   <h2>🔔 響片訓練（Clicker Training）</h2>
-  <div class="card">
+  <div class="card training-section">
+    <div class="training-img-right">
+      <img src="/images/training/male-parrotlet.jpg" alt="公太平洋鸚鵡—響片訓練最佳夥伴" class="section-image" loading="lazy" />
+    </div>
     <p>響片訓練是最有效的正向強化訓練法，利用一個響亮的「Click」聲標記鳥兒正確的行為，然後立刻給獎勵。鸚鵡會很快理解「Click = 你做了對的事 = 好吃的來了」。</p>
 
     <h3>需要準備</h3>
@@ -55,7 +58,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- ── Target Training ── -->
   <h2>🎯 目標訓練（Target Training）</h2>
-  <div class="card">
+  <div class="card training-section">
     <p>目標訓練是用一支目標棒（target stick）引導鳥去觸碰，是所有特技訓練的基礎。</p>
 
     <h3>準備工具</h3>
@@ -88,7 +91,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- ── Flight Recall ── -->
   <h2>🦅 飛行召回（Flight Recall）</h2>
-  <div class="card">
+  <div class="card training-section">
     <p>教鳥飛到你手上，是信任的終極表現，也是最實用的技能之一。</p>
 
     <h3>訓練階段</h3>
@@ -131,7 +134,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- ── Tricks ── -->
   <h2>🤹 特技教學</h2>
-  <div class="card">
+  <div class="card training-section">
+    <div class="training-img-left">
+      <img src="/images/training/pet-parrotlet.jpg" alt="寵物太平洋鸚鵡—特技訓練中" class="section-image" loading="lazy" />
+    </div>
     <p>所有特技都建立在目標訓練的基礎上。先學目標訓練再教特技，鳥理解速度會快非常多。</p>
 
     <table>
@@ -187,7 +193,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- ── Harness Training ── -->
   <h2>🪢 外出繩訓練</h2>
-  <div class="card">
+  <div class="card training-section">
     <p>對鸚鵡來說，穿外出繩不是天生接受的。需要長時間的減敏訓練，千萬不能硬套。</p>
 
     <h3>訓練時程（約 2–4 週，每天 5–10 分鐘）</h3>
@@ -216,7 +222,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- ── Foraging ── -->
   <h2>🧩 覓食訓練（Foraging & Enrichment）</h2>
-  <div class="card">
+  <div class="card training-section">
+    <div class="training-img-right">
+      <img src="/images/training/blue-parrotlet.jpg" alt="藍色變異太平洋鸚鵡—覓食益智時間" class="section-image" loading="lazy" />
+    </div>
     <p>野生鸚鵡花 60–70% 的時間尋找食物。人工飼養的鳥直接把飯碗放在面前，缺乏心智刺激容易導致行為問題（拔毛、自殘）。</p>
 
     <h3>初級覓食（入門）</h3>
@@ -285,5 +294,44 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin: 1rem 0 0.5rem;
     font-size: 1rem;
     color: var(--coral);
+  }
+
+  /* Training section image layout */
+  .training-section {
+    overflow: hidden;
+  }
+
+  .training-img-right,
+  .training-img-left {
+    margin-bottom: 1rem;
+  }
+
+  .training-img-right .section-image,
+  .training-img-left .section-image {
+    width: 100%;
+    max-width: 360px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--glass-shadow);
+    border: 1px solid var(--glass-border);
+  }
+
+  .training-img-right .section-image {
+    float: right;
+    margin: 0.3rem 0 0.8rem 1.2rem;
+  }
+
+  .training-img-left .section-image {
+    float: left;
+    margin: 0.3rem 1.2rem 0.8rem 0;
+  }
+
+  @media (max-width: 640px) {
+    .training-img-right .section-image,
+    .training-img-left .section-image {
+      float: none;
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 1rem;
+    }
   }
 </style>
