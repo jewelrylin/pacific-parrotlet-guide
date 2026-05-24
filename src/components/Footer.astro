@@ -1,11 +1,11 @@
-<footer class="site-footer">
+<footer class="glass-footer">
   <div class="footer-inner">
     <div class="footer-col">
       <div class="footer-brand">
         <span class="footer-icon">🦜</span>
         <h4>太平洋鸚鵡飼養指南</h4>
       </div>
-      <p>完整飼養知識，從幼鳥挑選到日常照護，陪伴您與口袋鸚鵡走過 15–25 年。</p>
+      <p>完整飼養知識，從幼鳥挑選到日常照護，陪伴您與口袋鸚鵡走過 15&#8211;25 年。</p>
     </div>
     <div class="footer-col">
       <h4>⚠️ 免責聲明</h4>
@@ -26,53 +26,67 @@
 </footer>
 
 <style>
-  .site-footer {
-    background: linear-gradient(160deg, #3D1F0A 0%, #6B3520 100%);
-    color: rgba(255,255,255,0.88);
-    margin-top: 3rem;
+  .glass-footer {
+    margin-top: 4rem;
+    background: rgba(255,255,255,0.60);
+    backdrop-filter: blur(16px) saturate(1.3);
+    -webkit-backdrop-filter: blur(16px) saturate(1.3);
+    border-top: 1px solid var(--glass-border);
   }
+
   .footer-inner {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 2rem;
-    padding: 2.5rem 1.5rem;
+    padding: 3rem 1.5rem 2rem;
   }
+
   .footer-brand {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 0.75rem;
   }
-  .footer-icon { font-size: 1.4rem; }
+
+  .footer-icon { font-size: 1.3rem; }
+
   .footer-col h4 {
-    color: var(--amber-light);
-    font-size: 0.95rem;
+    color: var(--coral);
+    font-size: 0.9rem;
+    font-weight: 600;
     margin-bottom: 0.65rem;
+    background: none;
+    -webkit-text-fill-color: var(--coral);
   }
+
   .footer-brand h4 { margin-bottom: 0; }
+
   .footer-col p {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     line-height: 1.65;
     margin-bottom: 0.4rem;
-    opacity: 0.85;
+    color: var(--text-tertiary);
   }
+
   .footer-col li {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     line-height: 1.65;
-    margin-bottom: 0.35rem;
-    opacity: 0.85;
-  }
-  .footer-col ul {
+    margin-bottom: 0.3rem;
+    color: var(--text-tertiary);
     list-style: none;
-    padding: 0;
   }
+
+  .footer-col ul { list-style: none; padding: 0; }
+
   .footer-bottom {
     text-align: center;
-    padding: 1rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 0.82rem;
-    opacity: 0.65;
+    padding: 1.2rem;
+    border-top: 1px solid var(--glass-border);
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
   }
+
+  .footer-bottom p { color: var(--text-tertiary); margin: 0; }
 </style>

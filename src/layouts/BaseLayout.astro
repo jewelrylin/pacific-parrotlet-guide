@@ -26,6 +26,18 @@ const { title, description, currentPath = '/', pageImage, pageImageAlt } = Astro
     <link rel="preconnect" href="https://upload.wikimedia.org" />
   </head>
   <body>
+    <!-- Glass shard particles for navigation transition -->
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+    <div class="glass-shard" aria-hidden="true"></div>
+
     <div class="layout-wrapper">
       <Header />
       <div class="content-wrapper">
@@ -43,5 +55,25 @@ const { title, description, currentPath = '/', pageImage, pageImageAlt } = Astro
       </div>
       <Footer />
     </div>
+
+    <script>
+      document.addEventListener('astro:page-load', () => {
+        document.querySelectorAll('a[href]').forEach(link => {
+          link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href?.startsWith('/') && !href.startsWith('//') && !e.metaKey && !e.ctrlKey) {
+              const shards = document.querySelectorAll('.glass-shard');
+              shards.forEach((shard, i) => {
+                shard.style.left = (40 + Math.random() * 20) + '%';
+                shard.style.top = (35 + Math.random() * 30) + '%';
+                shard.style.animation = 'none';
+                shard.offsetWidth;
+                shard.style.animation = `shard-fly 0.3s ease-out ${i * 0.015}s forwards`;
+              });
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

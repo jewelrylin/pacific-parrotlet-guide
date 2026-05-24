@@ -10,7 +10,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   pageImageAlt="野生太平洋鸚鵡（Pacific Parrotlet）"
 >
   <section class="hero">
-    <h1>🦜 太平洋鸚鵡飼養指南</h1>
+    <div class="hero-badge">🦜 完整飼養指南</div>
+    <h1>太平洋鸚鵡飼養指南</h1>
     <p class="hero-sub">Pacific Parrotlet Care Guide — <em>Forpus coelestis</em></p>
     <p class="hero-desc">全世界最小的鸚鵡之一，卻有著大鳥的個性。本指南涵蓋從幼鳥挑選到日常照護的所有知識，幫助您與口袋鸚鵡共度 15–25 年的美好時光。</p>
   </section>
@@ -31,120 +32,196 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <h2>📖 飼養指南總覽</h2>
   <div class="card-grid">
     <a href="/selecting-chicks" class="card-link">
-      <div class="card">
+      <div class="card glass-card">
+        <div class="card-accent"></div>
         <div class="card-icon">🥚</div>
         <h3>幼鳥挑選</h3>
         <p>最佳年齡、健康檢查表、性別判斷、向繁殖者提問清單。</p>
+        <span class="card-arrow">→</span>
       </div>
     </a>
     <a href="/hand-feeding" class="card-link">
-      <div class="card">
+      <div class="card glass-card">
+        <div class="card-accent"></div>
         <div class="card-icon">🍼</div>
         <h3>手養方式</h3>
         <p>成長時程表、配方調配、餵食步驟、保溫需求、斷奶流程。</p>
+        <span class="card-arrow">→</span>
       </div>
     </a>
     <a href="/taming" class="card-link">
-      <div class="card">
+      <div class="card glass-card">
+        <div class="card-accent"></div>
         <div class="card-icon">🤝</div>
         <h3>親人訓練</h3>
         <p>適應期、建立信任、上手訓練、棍棒訓練、正向強化。</p>
+        <span class="card-arrow">→</span>
       </div>
     </a>
     <a href="/health-check" class="card-link">
-      <div class="card">
+      <div class="card glass-card">
+        <div class="card-accent"></div>
         <div class="card-icon">🏥</div>
         <h3>健康檢查</h3>
         <p>每日檢查、疾病徵兆對照表、血羽處理、卡蛋急救、醫院籠設置。</p>
+        <span class="card-arrow">→</span>
       </div>
     </a>
     <a href="/daily-care" class="card-link">
-      <div class="card">
+      <div class="card glass-card">
+        <div class="card-accent"></div>
         <div class="card-icon">🏠</div>
         <h3>日常飼養</h3>
         <p>飲食比例、籠具環境、家中危險源、睡眠、洗澡。</p>
+        <span class="card-arrow">→</span>
       </div>
     </a>
     <a href="/behavior" class="card-link">
-      <div class="card">
+      <div class="card glass-card">
+        <div class="card-accent"></div>
         <div class="card-icon">🧠</div>
         <h3>行為特質</h3>
         <p>單隻 vs 一對飼養建議、與其他寵物相處、飼養提醒。</p>
+        <span class="card-arrow">→</span>
       </div>
     </a>
   </div>
 </BaseLayout>
 
 <style>
+  /* ── Hero Section ── */
   .hero {
     text-align: center;
-    padding: 2rem 1rem 1.5rem;
+    padding: 3rem 1rem 2rem;
   }
+
+  .hero-badge {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: rgba(0,212,255,0.10);
+    border: 1px solid rgba(0,212,255,0.20);
+    color: var(--cyan);
+    margin-bottom: 1.5rem;
+  }
+
   .hero h1 {
-    font-size: 2.4rem;
-    margin-bottom: 0.3rem;
-    background: linear-gradient(135deg, var(--coral-dark), var(--amber));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
   }
+
   .hero-sub {
-    color: var(--amber);
+    color: var(--text-tertiary);
     font-size: 1.05rem;
-    margin-bottom: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
   }
+
   .hero-desc {
     max-width: 620px;
     margin: 0 auto;
-    color: var(--text-light);
-    font-size: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
     line-height: 1.75;
   }
+
+  /* ── Quick Info Card ── */
   .quick-info {
     max-width: 600px;
     margin: 0 auto 2rem;
   }
+
+  .quick-info h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Glass Card Grid ── */
   .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 1.25rem;
     margin-top: 0.5rem;
   }
+
   .card-link {
     text-decoration: none !important;
     color: inherit;
     display: block;
-    transition: transform 0.2s;
+    perspective: 800px;
   }
-  .card-link:hover {
-    transform: translateY(-5px);
-    text-decoration: none;
-  }
-  .card-link .card {
+
+  .glass-card {
+    position: relative;
+    overflow: hidden;
     height: 100%;
-    border-top: 4px solid var(--coral-light);
+    cursor: pointer;
   }
-  .card-link:hover .card {
-    border-top-color: var(--coral);
-    box-shadow: 0 8px 28px rgba(200,80,30,0.18);
+
+  /* Accent gradient bar on top of each card */
+  .card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   }
+
+  .card-link:hover .card-accent {
+    opacity: 1;
+  }
+
+  .card-link:hover .glass-card {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(0,212,255,0.25);
+  }
+
   .card-icon {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
-  .card-link h3 {
+
+  .glass-card h3 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  .card-link p {
-    color: var(--text-light);
-    font-size: 0.88rem;
+
+  .glass-card p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
     margin: 0;
     line-height: 1.6;
   }
 
+  .card-arrow {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: var(--cyan-dim);
+    transition: transform 0.2s ease, color 0.2s;
+  }
+
+  .card-link:hover .card-arrow {
+    transform: translateX(4px);
+    color: var(--cyan);
+  }
+
   @media (max-width: 768px) {
-    .hero h1 { font-size: 1.7rem; }
+    .hero { padding: 2rem 0.5rem 1.5rem; }
+    .hero h1 { font-size: 1.8rem; }
     .card-grid { grid-template-columns: 1fr; }
   }
 </style>

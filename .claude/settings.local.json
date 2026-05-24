@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:commons.wikimedia.org)",
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(curl -L -A Mozilla/5.0 -o /Users/jewelrylin/Documents/bridwork/public/images/parrot-wild.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Wild_Parrot_%2826900630105%29.jpg/1200px-Wild_Parrot_%2826900630105%29.jpg)",
+      "Bash(curl -L -A Mozilla/5.0 -o /Users/jewelrylin/Documents/bridwork/public/images/parrot-chicks.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Pulli_di_forpus_coelestis.JPG/1200px-Pulli_di_forpus_coelestis.JPG)",
+      "Bash(curl -L -A Mozilla/5.0 -o /Users/jewelrylin/Documents/bridwork/public/images/parrot-pet.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/MrPickles.jpg/1200px-MrPickles.jpg)",
+      "Bash(curl -L -A Mozilla/5.0 -o /Users/jewelrylin/Documents/bridwork/public/images/parrot-tame.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Echo_Smithour.jpg/1200px-Echo_Smithour.jpg)",
+      "Bash(curl -L -A Mozilla/5.0 -o /Users/jewelrylin/Documents/bridwork/public/images/parrot-healthy.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Forpus_coelestis_-Peru_-male-8-2c.jpg/1200px-Forpus_coelestis_-Peru_-male-8-2c.jpg)",
+      "Bash(curl -L -H 'User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\) AppleWebKit/537.36 Chrome/120 Safari/537.36' -H 'Referer: https://commons.wikimedia.org/' -o /Users/jewelrylin/Documents/bridwork/public/images/parrot-wild.jpg https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Wild_Parrot_%2826900630105%29.jpg/1200px-Wild_Parrot_%2826900630105%29.jpg)",
+      "Bash(python3 -c ' *)",
+      "WebFetch(domain:w.wiki)",
+      "WebFetch(domain:www.mediawiki.org)"
+    ]
+  }
+}
